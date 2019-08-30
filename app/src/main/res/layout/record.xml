@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.fish.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                           xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+                                           android:layout_height="wrap_content"
+                                           android:id="@+id/record"
+                                           android:visibility="visible"
+                                           android:orientation="vertical"
+                                           android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:weightSum="11">
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                      android:orientation="vertical" android:layout_weight="10">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:layout_alignParentBottom="true" android:id="@+id/name_layout">
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="80dp" app:srcCompat="@drawable/kakaotalk_20190816_211203382"
+                        android:id="@+id/imageView" android:layout_weight="1"/>
+                <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent" android:id="@+id/view3" android:layout_weight="0"/>
+                <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="4"
+                          android:textSize="@dimen/column_size" android:id="@+id/name_edit"
+                          android:adjustViewBounds="true" android:gravity="center|start"
+                          android:textColor="#3e3e3e"/>
+            </LinearLayout>
+        </LinearLayout>
+        <CheckBox android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                  android:id="@+id/checkbox" android:visibility="gone" android:clickable="false"/>
+
+    </LinearLayout>
+    <View
+            android:layout_width="wrap_content" android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#000000" android:visibility="visible" android:id="@+id/line"/>
+</com.example.fish.CheckableLinearLayout>

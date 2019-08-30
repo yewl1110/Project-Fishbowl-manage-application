@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        tools:context=".DeleteActivity"
+        android:weightSum="3" android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="2" android:orientation="horizontal" android:weightSum="10">
+        <View android:layout_width="0dp" android:layout_height="@dimen/column_size"
+              android:layout_gravity="center" android:layout_weight="2"/>
+        <TextView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:textSize="@dimen/column_size"
+                android:layout_gravity="center"
+                android:layout_weight="6"
+                android:text="삭제하시겠습니까?"
+                android:fontFamily="@font/nanumgothicextrabold"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                  android:orientation="horizontal" android:layout_weight="1" android:weightSum="12">
+        <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2"/>
+        <Button
+                android:layout_width="0dp" android:textSize="@dimen/column_size"
+                android:gravity="center"
+                android:layout_height="@dimen/button_height"   android:layout_weight="3"
+                android:id="@+id/popup_delete_ok" android:text="OK"
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_gravity="center"/>
+        <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2"/>
+        <Button
+                android:layout_width="0dp" android:textSize="15sp"
+                android:layout_height="50dp"   android:layout_weight="3"
+                android:id="@+id/popup_delete_cancle" android:text="cancle"
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

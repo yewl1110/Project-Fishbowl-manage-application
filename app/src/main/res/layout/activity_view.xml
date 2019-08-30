@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ViewActivity">
+    <!--<LinearLayout
+            android:layout_width="match_parent" android:layout_height="60dp"
+            android:background="#1f1f1f">
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_sync_24px"
+                android:background="#00000000"
+                android:gravity="right" android:layout_weight="2"
+                android:id="@+id/loading_button"/>
+
+        <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="10"
+                  android:textSize="@dimen/column_size" android:id="@+id/name_view"
+                  android:gravity="center" android:textColor="#ffffff"/>
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_round_more_vert_48px"
+                android:background="#00000000"
+                android:gravity="left" android:layout_weight="2"
+                android:id="@+id/menu_button"/>
+    </LinearLayout>-->
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" android:id="@+id/view2"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/record"
+            android:visibility="visible"
+            android:orientation="vertical">
+        <LinearLayout
+                android:id="@+id/temp_bright_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+            <LinearLayout
+                    android:id="@+id/temperature_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_weight="1">
+                <TextView
+                        android:text=" 온도"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:textSize="@dimen/column_size"
+                        android:fontFamily="@font/nanumgothicextrabold" android:textColor="#3e3e3e"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:id="@+id/temperature_view"
+                        android:textSize="@dimen/column_size" android:textColor="#3e3e3e"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/brightness_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_weight="1">
+                <TextView
+                        android:text=" 광도"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:textSize="@dimen/column_size"
+                        android:fontFamily="@font/nanumgothicextrabold" android:textColor="#3e3e3e"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:id="@+id/brightness_view"
+                        android:textSize="@dimen/column_size" android:textColor="#3e3e3e"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/filter_acid_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+            <LinearLayout
+                    android:id="@+id/filter_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_weight="1">
+                <TextView
+                        android:text=" 필터"
+                        android:layout_height="33dp"
+                        android:textSize="@dimen/column_size"
+                        android:fontFamily="@font/nanumgothicextrabold" android:textColor="#3e3e3e"
+                        android:layout_width="wrap_content"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:id="@+id/filter_view"
+                        android:textSize="@dimen/column_size" android:textColor="#3e3e3e"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_weight="1">
+                <TextView
+                        android:text=" 산성도"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp" android:id="@+id/textView2" android:textSize="@dimen/column_size"
+                        android:fontFamily="@font/nanumgothicextrabold" android:textColor="#3E3E3E"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:id="@+id/acid_view" android:textColor="#3E3E3E"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/develop_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:id="@+id/id_layout" android:visibility="gone">
+                <TextView android:layout_weight="1" android:layout_height="33dp" android:text=" id  "
+                          android:layout_width="0dp"
+                          android:textSize="@dimen/column_size"
+                          android:textColor="#3e3e3e" android:id="@+id/id"
+                          android:fontFamily="@font/nanumgothicextrabold"/>
+                <TextView android:layout_weight="7" android:layout_height="match_parent" android:layout_width="0dp"
+                          android:textSize="@dimen/column_size" android:textColor="#3e3e3e" android:id="@+id/id_view"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:layout_centerInParent="true" android:id="@+id/serial_layout"
+                          android:visibility="gone">
+                <TextView android:layout_width="0dp" android:layout_height="33dp" android:text=" serial  "
+                          android:layout_weight="1"
+                          android:id="@+id/serial"
+                          android:textSize="@dimen/column_size"
+                          android:fontFamily="@font/nanumgothicextrabold" android:textColor="#3e3e3e"/>
+                <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3"
+                          android:textSize="@dimen/column_size" android:id="@+id/serial_view"
+                          android:textColor="#3e3e3e"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    </LinearLayout>
+</LinearLayout>
