@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">fish</string>
     <string name="title_activity_view">ViewActivity</string>
+    <string name="title_activity_maps2">Map</string>
 </resources>

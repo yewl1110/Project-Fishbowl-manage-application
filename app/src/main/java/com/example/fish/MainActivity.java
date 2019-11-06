@@ -37,19 +37,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     FloatingActionButton fab_menu;
     FloatingActionButton fab_add;
     FloatingActionButton fab_delete;
-
+    ImageButton search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //DB에 접근하기위해 (내부저장소) 권한설정
-        if(shouldShowRequestPermissionRationale(Manifest.permission.READ_EXTERNAL_STORAGE)){
+        //위치 권한 설정
+        if(shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_FINE_LOCATION)){
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
             dialog.setTitle("권한이 필요합니다.")
-                  .setMessage("외부 저장소 읽기 권한을 허용합니다.")
+                  .setMessage("ACCESS_FINE_LOCATION을 허용합니다.")
                   .setPositiveButton("네", new DialogInterface.OnClickListener() {
                       @Override
                       public void onClick(DialogInterface dialogInterface, int i) {
-                          ActivityCompat.requestPermissions(MainActivity.this, new String[] {"Manifest.permission.READ_EXTERNAL_STORAGE"}, 1);
+                          ActivityCompat.requestPermissions(MainActivity.this, new String[] {"Manifest.permission.ACCESS_FINE_LOCATION"}, 1);
                       }
                   })
                   .setNegativeButton("아니오", new DialogInterface.OnClickListener() {
@@ -62,27 +62,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                   .show();
         }
 
-
-        //get serial number
-        if(shouldShowRequestPermissionRationale(Manifest.permission.READ_PHONE_STATE)){
-            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-            dialog.setTitle("권한이 필요합니다.")
-                    .setMessage("외부 저장소 읽기 권한을 허용합니다.")
-                    .setPositiveButton("네", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            ActivityCompat.requestPermissions(MainActivity.this, new String[] {"Manifest.permission.READ_PHONE_STATE"}, 1);
-                        }
-                    })
-                    .setNegativeButton("아니오", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            finish();
-                        }
-                    })
-                    .create()
-                    .show();
-        }
 
         /*if (ContextCompat.checkSelfPermission(
                 this,
